@@ -11,14 +11,14 @@ def start_simulation():
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
     p.loadURDF("plane.urdf")
 
-    # 🔴 putanja do tvog xarm modela
+    # putanja do xarm modela
     current_dir = os.path.dirname(os.path.abspath(__file__))
     xarm_path = os.path.join(current_dir, "assets", "xarm")
 
-    # kažemo PyBullet-u gde da traži fajlove
+    # kažem PyBullet-u gdje da traži fajlove
     p.setAdditionalSearchPath(xarm_path)
 
-    # učitavanje robota
+    # učitavam robota
     robot = p.loadURDF("xarm7.urdf", [0, 0, 0], useFixedBase=True)
 
     p.setGravity(0, 0, -9.8)
