@@ -1,0 +1,3 @@
+pybullet
+xarm-python-sdk
+numpy
